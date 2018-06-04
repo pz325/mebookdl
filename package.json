@@ -4,12 +4,14 @@
   "description": "mebook downloader",
   "main": "mebookdl.js",
   "scripts": {
+    "postinstall": "node installPanBaiduDownload.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "commander": "^2.15.1",
     "node-fetch": "^2.1.2"
   }
 }
