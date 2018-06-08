@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 const cheerio = require("cheerio");
 const program = require("commander");
 const pjson = require('./package.json');
-const execSync = require("child_process").execSync;
+const spawn = require('child_process').spawn;
 
 // const url = "http://mebook.cc/22773.html";
 const DEFAULT_EXTENSION = "azw3";
@@ -53,9 +53,14 @@ const downloadBook = async (url, extension) => {
         .then(body => {
             const panUrl = extractBaiduPanUrl(body);
             const secret = extractBaiduPanSecret(body);
-            const cmd = `python pan-baidu-download/bddown_cli.py download ${panUrl} -S ${secret} -E ${extension}`;
-            console.log(cmd);
-            console.log(execSync(cmd));
+            
+            downloadProcess = spawn("python", ["pan-baidu-download/bddown_cli.py", "download", panUrl, "-S", secret, "-E", extension], { stdio: 'inherit' });
+            downloadProcess.on("exit", exitCode => {
+                console.log(`Downloading process exits with code ${exitCode}`);
+            });
+            downloadProcess.on("error", error => {
+                console.log(`Downloading process exits with Error ${error}`);
+            });
         });
 }
 

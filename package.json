@@ -4,7 +4,7 @@
   "description": "mebook downloader",
   "main": "mebookdl.js",
   "scripts": {
-    "postinstall": "node installPanBaiduDownload.js",
+    "postinstall": "node installPanBaiduDownload.js && brew install aria2",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
