@@ -1,4 +1,4 @@
-# Downloader CLI for http://mebook.cc/
+# Downloader CLI for mebook.cc
 ## Usage
 Installation
 ```
