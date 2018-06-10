@@ -32,3 +32,7 @@ To download `epub` format.
 ```
 mebookdl -u http://mebook.cc/22827.html -e epub
 ```
+
+## Todo
+* Support Windows
+* Make mebookdl a Chrome Extension
