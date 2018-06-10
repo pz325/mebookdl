@@ -1,9 +1,23 @@
 # Downloader CLI for mebook.cc
-## Usage
-Installation
+Command line tool for downloading ebooks from http://mebook.cc
+
+Support MacOS only
+
+## Prerequisition
+* git 
+    (`xcode-select install` or `brew install git`)
+* https://github.com/pz325/pan-baidu-download
+    * python 2.7+
+    * Requests (`pip install requests`)
+    * aria2 (`brew install aria2`)
+    * pan-baidu-download is installed as part of mebookdl post install script
+
+## Installation
 ```
 npm install mebookdl
 ```
+
+## Usage
 By default mebookdl downloads only `azw3` format.
 ```
 node mebookdl.js -u http://mebook.cc/22827.html
