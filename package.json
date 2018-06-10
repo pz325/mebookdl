@@ -14,5 +14,8 @@
     "commander": "^2.15.1",
     "node-fetch": "^2.1.2"
   },
-  "repository": "github:pz325/mebookdl"
+  "repository": "github:pz325/mebookdl",
+  "bin": {
+    "mebookdl": "mebookdl.js"
+  }
 }
