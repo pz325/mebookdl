@@ -10,11 +10,11 @@ Support MacOS only
     * python 2.7+
     * Requests (`pip install requests`)
     * aria2 (`brew install aria2`)
-    * pan-baidu-download is installed as part of mebookdl post install script
+    * (Both `pan-baidu-download` and `aria2` are installed as part of mebookdl post install script.)
 
 ## Installation
 ```
-npm install mebookdl
+npm install -g mebookdl
 ```
 
 ## Usage

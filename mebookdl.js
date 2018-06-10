@@ -4,7 +4,6 @@ const program = require("commander");
 const pjson = require('./package.json');
 const spawn = require('child_process').spawn;
 
-// const url = "http://mebook.cc/22773.html";
 const DEFAULT_EXTENSION = "azw3";
 
 const extractUrl = (htmlContent, match) => {
@@ -54,7 +53,9 @@ const downloadBook = async (url, extension) => {
             const panUrl = extractBaiduPanUrl(body);
             const secret = extractBaiduPanSecret(body);
             
-            downloadProcess = spawn("python", ["pan-baidu-download/bddown_cli.py", "download", panUrl, "-S", secret, "-E", extension], { stdio: 'inherit' });
+            downloadProcess = spawn("python", 
+                ["pan-baidu-download/bddown_cli.py", "download", panUrl, "-S", secret, "-E", extension, "-D", process.cwd()], 
+                { cwd: __dirname, stdio: 'inherit' });
             downloadProcess.on("exit", exitCode => {
                 console.log(`Downloading process exits with code ${exitCode}`);
             });
