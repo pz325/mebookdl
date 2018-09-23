@@ -3,6 +3,7 @@ Command line tool for downloading ebooks from http://mebook.cc
 
 Support MacOS only
 
+Now also support https://sobook.cc
 ## Prerequisition
 * git 
     (`xcode-select install` or `brew install git`)
@@ -33,6 +34,10 @@ To download `epub` format.
 mebookdl -u http://mebook.cc/22827.html -e epub
 ```
 
+To download from [SoBooks](https://sobooks.cc/).
+```
+mebookdl -u https://sobooks.cc/books/10280.html
+```
 ## Todo
 * Support Windows
 * Make mebookdl a Chrome Extension
