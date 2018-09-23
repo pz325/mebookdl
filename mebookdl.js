@@ -7,7 +7,8 @@ const pjson = require('./package.json');
 const spawn = require('child_process').spawn;
 
 const DEFAULT_EXTENSION = "azw3";
-const SOBOOKS = "sobooks.cc/books";
+const SOBOOKS_URL_1 = "sobooks.cc/books";
+const SOBOOKS_URL_2 = "www.sokindle.com/books";
 
 const extractUrl = (htmlContent, match) => {
     let url = "";
@@ -75,7 +76,7 @@ const extractSoBooksBaiduPanSecret = htmlContent => {
 
 const downloadBook = async (url, extension) => {
     console.log(`Downloading from ${url} with extension ${extension}`);
-    if (url.includes(SOBOOKS)) {
+    if (url.includes(SOBOOKS_URL_1) || url.includes(SOBOOKS_URL_2)) {
         await downloadFromSoBooks(url, extension);
     } else {
         await downloadFromMebook(url, extension);

@@ -1,6 +1,6 @@
 {
   "name": "mebookdl",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "mebook (and sobooks) downloader",
   "main": "mebookdl.js",
   "scripts": {
