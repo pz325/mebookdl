@@ -10,8 +10,8 @@ const installPanBaiduDownload = () => {
     }
 
     execSync(cmd);
-}
+};
 
 module.exports = {
     installPanBaiduDownload: installPanBaiduDownload
-}
+};
