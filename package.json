@@ -1,10 +1,10 @@
 {
     "name": "mebookdl",
-    "version": "1.0.5",
-    "description": "mebook downloader",
+    "version": "1.2.1",
+    "description": "mebook (and sobooks) downloader",
     "main": "mebookdl.js",
     "scripts": {
-        "postinstall": "node installPanBaiduDownload.js && brew install aria2",
+        "postinstall": "node postinstall.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "pz325",
@@ -12,10 +12,14 @@
     "dependencies": {
         "cheerio": "^1.0.0-rc.2",
         "commander": "^2.15.1",
-        "node-fetch": "^2.1.2"
+        "node-fetch": "^2.1.2",
+        "request": "^2.88.0",
+        "unzip": "^0.1.11",
+        "winston": "^3.1.0"
     },
     "repository": "github:pz325/mebookdl",
     "bin": {
         "mebookdl": "mebookdl.js"
-    }
+    },
+    "devDependencies": {}
 }

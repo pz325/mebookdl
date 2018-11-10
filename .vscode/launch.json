@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch installAria",
+            "program": "${workspaceFolder}\\installAria.js"
+        },
+        {
+            "type": "python",
+            "request": "launch",
+            "name": "Launch pan downloader",
+            "program": "${workspaceFolder}\\pan-baidu-download\\bddown_cli.py",
+            "args": [
+                "download",
+                "https://pan.baidu.com/s/1PRgkjhS0LVFb4fhuMK7uAg",
+                "-S",
+                "{secret}",
+                "-E",
+                "azw3"
+            ]
+        }
+    ]
+}
