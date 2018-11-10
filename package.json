@@ -1,21 +1,21 @@
 {
-  "name": "mebookdl",
-  "version": "1.0.4",
-  "description": "mebook downloader",
-  "main": "mebookdl.js",
-  "scripts": {
-    "postinstall": "node installPanBaiduDownload.js && brew install aria2",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "pz325",
-  "license": "MIT",
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "commander": "^2.15.1",
-    "node-fetch": "^2.1.2"
-  },
-  "repository": "github:pz325/mebookdl",
-  "bin": {
-    "mebookdl": "mebookdl.js"
-  }
+    "name": "mebookdl",
+    "version": "1.0.5",
+    "description": "mebook downloader",
+    "main": "mebookdl.js",
+    "scripts": {
+        "postinstall": "node installPanBaiduDownload.js && brew install aria2",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "pz325",
+    "license": "MIT",
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.2",
+        "commander": "^2.15.1",
+        "node-fetch": "^2.1.2"
+    },
+    "repository": "github:pz325/mebookdl",
+    "bin": {
+        "mebookdl": "mebookdl.js"
+    }
 }
